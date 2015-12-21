@@ -3,7 +3,11 @@
     <ul class="sidebar-nav">
       <% @products.each do |item| %>
 
-      <li class="item-category"><%= item %></li>
+      <li class="item-category">
+        <a href="/product?utf8=✓&q%5Bname_cont%5D=<%=item%>&commit=Search">
+          <%= item %>
+        </a>
+      </li>
       <% end %>
     </ul>
   </div>
