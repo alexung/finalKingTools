@@ -7,5 +7,5 @@
 
 $(document).ready(function() {
 
-  $("#owl-lol").owlCarousel();
+  // $("#owl-lol").owlCarousel();
 });
