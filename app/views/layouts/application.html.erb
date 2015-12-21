@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>KingTools</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+
+
+</head>
+<body>
+  <div class="custom-navbar navbar-default">
+      <span class="site-title"><a href="/">King Tools & Equipment</a></span>
+  <% if @q %>
+    <%= search_form_for @q, url: product_index_path do |f| %>
+      <span class="field">
+        <%= f.label :name_cont, "Name contains" %>
+        <%= f.text_field :name_cont %>
+      </span>
+      <span class="actions"><%= f.submit "Search"%></span>
+    <% end %>
+  <% end %>
+  <a href="/product">Products</a>
+  <a href="/contact">Contact Us</a>
+ </div>
+
+<%= yield %>
+
+<script type="text/javascript" charset="utf-8">
+    window._token = '<%= form_authenticity_token -%>';
+</script>
+
+</body>
+</html>

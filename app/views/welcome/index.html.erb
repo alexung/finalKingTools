@@ -1,0 +1,43 @@
+<div id="wrapper">
+  <div id="sidebar-wrapper">
+    <ul class="sidebar-nav">
+      <li class="item-category">category 1</li>
+      <li class="item-category">category 2</li>
+    </ul>
+  </div>
+
+  <div id="page-content-wrapper">
+    <h1>HOMEPAGE</h1>
+
+    <!-- test -->
+    <div id="owl-lol" class="owl-carousel owl-theme">
+      <div class="item"><img src="assets/tools.jpg" alt="Tool Image"></div>
+      <div class="item"><img src="assets/tools2.jpg" alt="Tool Image"></div>
+      <div class="item"><img src="assets/tools3.jpg" alt="Tool Image"></div>
+      <div class="item"><img src="assets/tools4.jpg" alt="Tool Image"></div>
+      <div class="item"><img src="assets/tools5.jpg" alt="Tool Image"></div>
+      <div class="item"><img src="assets/tools6.jpg" alt="Tool Image"></div>
+      <div class="item"><img src="assets/tools7.jpg" alt="Tool Image"></div>
+
+    </div>
+      <!-- end test -->
+
+      <a href="#menu-toggle" class="btn btn-default" id="menu-toggle">Toggle Menu</a>
+
+      <div class="container">
+        <iframe width="100%" height="100%" frameborder="0" style="border:0"
+        src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['GOOGLE_MAPS_API_KEY'] %>&q=1255+E+Acacia+St,Ontario,CA,+91761" allowfullscreen></iframe>
+      </div>
+    <div class="container footer">
+      <a href="/policy">Policy</a>
+      <a href="/about-us">About Us</a>
+    </div>
+  </div>
+</div>
+
+  <script>
+  $("#menu-toggle").click(function(e) {
+      e.preventDefault();
+      $("#wrapper").toggleClass("toggled");
+  });
+  </script>
