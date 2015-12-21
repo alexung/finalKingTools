@@ -1,8 +1,10 @@
 <div id="wrapper">
   <div id="sidebar-wrapper">
     <ul class="sidebar-nav">
-      <li class="item-category">category 1</li>
-      <li class="item-category">category 2</li>
+      <% @products.each do |item| %>
+
+      <li class="item-category"><%= item %></li>
+      <% end %>
     </ul>
   </div>
 
