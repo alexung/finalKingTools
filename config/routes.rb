@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     collection { post :import }
   end
   resources :users
+  resources :policy
+  resources :about
   get '/manage-products', to: 'users#manage_products'
   root 'welcome#index'
   post '/sent', to: "contact#sent"
